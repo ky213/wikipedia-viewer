@@ -1,0 +1,25 @@
+a:link{
+    text-decoration: unset;
+}
+
+#search button{
+    top:35%;
+    right: 15px;
+}
+
+#search  input{
+    height: 80px;
+    font-size: 3rem;
+    border:0 ;
+    border-bottom:2px solid white;
+}
+
+@media(max-width:320px){
+    #search  input{
+        font-size: 1.5rem !important;
+    }
+
+    #search-box{
+        width: 100% !important;
+    }
+}

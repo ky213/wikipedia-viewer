@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Gugi|Cute+Font" rel="stylesheet">
+    <link rel="icon" href="img/wikipedia-logotype-of-earth-puzzle.svg">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+    <title>Wikipedia Viewer</title>
+</head>
+
+<body class="">
+    <div class="container-fluid bg-warning position-absolute h-100">
+        <div class="row justify-content-center align-items-center align-content-center h-100 bg-danger text-center text-light ">
+            <div class="tobeFaded col-md-4 mb-5 ">
+                <h1 id="random-search">
+                    <a class="text-light" target="_blank" href="https://en.wikipedia.org/wiki/Special:Random">
+                        <i class="fa fa-random mr-2"></i>
+                        Random search
+                    </a>
+                </h1>
+            </div>
+            <div class="tobeFaded  col-md-4 mb-5">
+                <h1 id="custom-search">
+                    <a class="text-light" href="#">
+                        <i class="fa fa-search mr-2"></i>
+                        Custom search
+                    </a>
+                </h1>
+            </div>
+            <div id="search-box" class="d-none" style="width: 0">
+                <p class="h1 text-right col">
+                    <a id="close-search" class="text-light" href="#">x</a>
+                </p>
+                <div id="search" class="col position-relative ">
+                    <form action="">
+                        <input class="col text-light bg-danger" type="text" placeholder="search" autofocus>
+                    <button type="submit" class="btn btn-danger position-absolute">
+                        <i id="spinner" class="fa fa-2x fa-search "></i>
+                    </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
