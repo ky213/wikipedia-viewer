@@ -27,20 +27,18 @@ $("#close-search").on("click", function () {
 
 $("form").on("submit", function () {
     const query = $(this).find("input").val();
-    const req = "https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=10&origin=*&search=" + query 
-   
+    const req = "https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=10&origin=*&search=" + query
 
-   // https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&gsrlimit=10&prop=pageimages|extracts&pilimit=max&exintro&explaintext&exsentences=1&exlimit=max&gsrsearch=usa&callback=angular.callbacks._0
 
     spinner('add');
     fetch(req).then(async function (res) {
         spinner('remove');
-        console.log(await res.json());
+        $('#results ul').empty()
+        spreadResult(await res.json());
     }).catch(function (err) {
         spinner('remove');
         console.log("Error", err);
     })
-
 
     return false;
 });
@@ -55,3 +53,21 @@ function spinner(action) {
             .addClass('fa-search')
     }
 }
+
+function spreadResult(r) {
+    r.shift()
+    r.forEach(function (val, i) {
+        val.forEach(function (text, j) {
+            let link = $("<a href='#' target='_blank' class='d-block pl-3 text-dark'></a>"),
+                title = $("<h3></h3>"),
+                body = $("<p class='lead'></p>")
+
+            title.text(r[0][j]);
+            body.text(r[1][j]);
+            link.attr('href', r[2][j])
+                .append(title, body)
+            $('#results ul').append(link)
+        })
+    })
+}
+

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="" lang="en">
+<html class="h-100" lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -20,9 +20,9 @@
     <title>Wikipedia Viewer</title>
 </head>
 
-<body class="">
-    <div class="container-fluid bg-warning position-absolute h-100">
-        <div class="row justify-content-center align-items-center align-content-center h-100 bg-danger text-center text-light ">
+<body class="bg-danger h-100">
+    <div class="container-fluid  h-100">
+        <div class="row justify-content-center align-items-center bg-danger text-center text-light h-100 ">
             <div class="tobeFaded col-md-4 mb-5 ">
                 <h1 id="random-search">
                     <a class="text-light" target="_blank" href="https://en.wikipedia.org/wiki/Special:Random">
@@ -46,10 +46,17 @@
                 <div id="search" class="col position-relative ">
                     <form action="">
                         <input class="col text-light bg-danger" type="text" placeholder="search" autofocus>
-                    <button type="submit" class="btn btn-danger position-absolute">
-                        <i id="spinner" class="fa fa-2x fa-search "></i>
-                    </button>
+                        <button type="submit" class="btn btn-danger position-absolute">
+                            <i id="spinner" class="fa fa-2x fa-search "></i>
+                        </button>
                     </form>
+                </div>
+            </div>
+            <div id="results" class="col-12 col-md-10 col-lg-8 mt-5">
+                <div class="row justify-content-center">
+                    <ul class="col text-left">
+                        
+                    </ul>
                 </div>
             </div>
         </div>
