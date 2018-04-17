@@ -2,6 +2,15 @@ a:link{
     text-decoration: unset;
 }
 
+#logo {
+    font-family: Lobster;
+}
+
+#logo img{
+    height: 70px;
+    width: 70px;
+}
+
 #search button{
     top:35%;
     right: 15px;
@@ -13,7 +22,6 @@ a:link{
     border:0 ;
     border-bottom:2px solid white;
 }
-
 
 #results a{
     border-left: 3px solid var(--yellow)

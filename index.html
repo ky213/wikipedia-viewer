@@ -23,6 +23,13 @@
 <body class="bg-danger h-100">
     <div class="container-fluid  h-100">
         <div class="row justify-content-center align-items-center bg-danger text-center text-light h-100 ">
+            <div class="tobeFaded col-md-12 mb-5 pt-2">
+                <h1 id="logo">
+                    <a class="text-light" href="/">
+                        <img class="mr-3" src="img/logo.svg" alt=""> Wikipedia Viewer
+                    </a>
+                </h1>
+            </div>
             <div class="tobeFaded col-md-4 mb-5 ">
                 <h1 id="random-search">
                     <a class="text-light" target="_blank" href="https://en.wikipedia.org/wiki/Special:Random">
@@ -32,30 +39,32 @@
                 </h1>
             </div>
             <div class="tobeFaded  col-md-4 mb-5">
-                <h1 id="custom-search">
-                    <a class="text-light" href="#">
+                <a id="custom-search" class="d-block text-light" href="#">
+                    <h1>
                         <i class="fa fa-search mr-2"></i>
                         Custom search
-                    </a>
-                </h1>
+                    </h1>
+                </a>
             </div>
-            <div id="search-box" class="d-none" style="width: 0">
-                <p class="h1 text-right col">
-                    <a id="close-search" class="text-light" href="#">x</a>
-                </p>
-                <div id="search" class="col position-relative ">
-                    <form action="">
-                        <input class="col text-light bg-danger" type="text" placeholder="search" autofocus>
-                        <button type="submit" class="btn btn-danger position-absolute">
-                            <i id="spinner" class="fa fa-2x fa-search "></i>
-                        </button>
-                    </form>
+            <div class="col-12">
+                <div id="search-box" class="d-none mx-auto" style="width: 0">
+                    <p class="h1 text-right col">
+                        <a id="close-search" class="text-light" href="#">x</a>
+                    </p>
+                    <div id="search" class="col position-relative ">
+                        <form action="">
+                            <input class="col text-light bg-danger" type="text" placeholder="search" autofocus>
+                            <button type="submit" class="btn btn-danger position-absolute">
+                                <i id="spinner" class="fa fa-2x fa-search "></i>
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
             <div id="results" class="col-12 col-md-10 col-lg-8 mt-5">
                 <div class="row justify-content-center">
                     <ul class="col text-left">
-                        
+
                     </ul>
                 </div>
             </div>

@@ -1,5 +1,4 @@
 $("#custom-search").on("click", function (e) {
-
     $(".tobeFaded").fadeOut(300, () => {
         $("#search-box")
             .removeClass('d-none')
@@ -10,13 +9,12 @@ $("#custom-search").on("click", function (e) {
                 }, 300)
             })
     });
-
-    return false;
+    return false
 });
 
 $("#close-search").on("click", function () {
     $("#search-box")
-        .animate({ width: 0 }, 300)
+        .animate({ width: "1%" }, 300)
         .fadeOut(100, function () {
             $(".tobeFaded").fadeIn(500)
         })
@@ -33,7 +31,9 @@ $("form").on("submit", function () {
     spinner('add');
     fetch(req).then(async function (res) {
         spinner('remove');
-        $('#results ul').empty()
+        $('#results ul')
+            .empty()
+            .fadeOut(300)
         spreadResult(await res.json());
     }).catch(function (err) {
         spinner('remove');
@@ -66,7 +66,9 @@ function spreadResult(r) {
             body.text(r[1][j]);
             link.attr('href', r[2][j])
                 .append(title, body)
-            $('#results ul').append(link)
+            $('#results ul')
+                .append(link)
+                .fadeIn(300)
         })
     })
 }
